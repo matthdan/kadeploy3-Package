@@ -1,2 +1,9 @@
-# kadeploy3-Package
-Makefiles and spefiles to build Kadeploy Rpms
+kadeploy3 Packaging
+===================
+
+Makefiles and spefiles to build Kadeploy Rpms                                                                                                             
+
+#Author:
+* Matthieu DANIEL <matth.daniel@gmail.com>
+
+

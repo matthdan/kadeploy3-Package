@@ -18,7 +18,7 @@ tar: rake
 	@echo "Get the tarball build"
 	cp /tmp/kabuild/kadeploy-3.3.0.stable.tar.gz .	
 
-rpm: deps rpmtopdirs distrules
+rpm: deps rpmtopdirs
 	rpmbuild --define "_topdir $(PWD)/RPMBUILD" --define "_sourcedir $(PWD)" -ba $(SPECFILE)
 
 distrules:
@@ -33,6 +33,8 @@ deps:
 
 rpmtopdirs: 
 	mkdir -p $(PWD)/RPMBUILD/{BUILD,RPMS,SRPMS,SPECS}
+
+.PHONY: tar distrules rpm clean 
 
 clean:
 	rm -rf $(PWD)/RPMBUILD
